@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's my Graduation!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+
+        /* --- CAJA DE REGALOS Y DATOS BANCARIOS --- */
+        .bank-box {
+            background: #ffffff;
+            border: 2px solid var(--negro-coquette);
+            padding: 35px 20px;
+            margin: 30px 0;
+            box-shadow: 7px 7px 0px var(--rosa-glitter); /* Sombra rosa estilo coquette/glam */
+            position: relative;
+            text-align: center;
+        }
+
+        .bank-title {
+            font-family: var(--fuente-vintage);
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .bank-details {
+            background-color: var(--papel-fondo);
+            border: 1px dashed var(--negro-coquette);
+            padding: 15px;
+            margin-top: 15px;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .bank-details p {
+            margin-bottom: 8px;
+        }
+        
+        .bank-details p:last-child {
+            margin-bottom: 0;
+        }
+        /* --- VARIABLES DE COLOR Y FUENTES --- */
+        :root {
+            --negro-coquette: #111111;
+            --plata-disco: #D2D7DF;
+            --rosa-glitter: #FF66B2;
+            --azul-glitter: #1A5276;
+            --fuente-script: 'Alex Brush', cursive;
+            --fuente-vintage: 'Playfair Display', serif;
+            --fuente-sans: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       
+        }
+
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--fuente-sans);
+            color: var(--negro-coquette);
+            
+            /* CONFIGURACIÓN PARA IMAGEN DE FONDO */
+            background-image: url('azul.jpg'); 
+            background-size: 100% auto;     /* Ajusta la foto al ancho exacto del celular */
+    background-repeat: repeat;      /* Si falta espacio abajo, la imagen se repite de forma fluida */
+    background-position: top center;
+            
+            line-height: 1.6;
+            text-align: center;
+            overflow-x: hidden;
+        }
+.container {
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+
+        /* --- PORTADA ESTILO COLLAGE --- */
+        .hero {
+            padding: 80px 20px 60px;
+            position: relative;
+            background: rgba(255, 255, 255, 0.15); /* Fondo ultra ligero para dar contraste sobre tu fondo1.jpg */
+            border-radius: 12px;
+            backdrop-filter: blur(2px); /* Efecto difuminado sutil estilo iOS */
+        }
+
+        .script-title {
+            font-family: var(--fuente-script);
+            font-size: 4rem;
+            color: var(--negro-coquette);
+            line-height: 0.8;
+            margin-bottom: 5px;
+        }
+
+        .main-title {
+            font-family: var(--fuente-sans);
+            font-weight: 700;
+            font-size: 2.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        /* Elemento decorativo flotante para la imagen de tu bola de disco */
+        .disco-ball-deco {
+            margin: 20px 0;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .badge-25 {
+            font-family: var(--fuente-vintage);
+            font-size: 3.5rem;
+            font-style: italic;
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke: 1.5px var(--negro-coquette);
+            line-height: 1;
+            margin: 15px 0;
+            text-transform: uppercase;
+        }
+
+        /* --- SECCIÓN DETALLES (Estilo tarjetas recortadas) --- */
+        .details-box {
+            background: #ffffff;
+            border: 2px solid var(--negro-coquette);
+            padding: 40px 20px 30px;
+            margin: 30px 0;
+            box-shadow: 7px 7px 0px var(--negro-coquette);
+            position: relative;
+        }
+
+        /* Detalle decorativo superior imitando papel rasgado azul de tu segunda foto */
+        .ripped-edge {
+            background-color: var(--azul-glitter);
+            height: 15px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 95% 70%, 90% 95%, 85% 65%, 80% 90%, 75% 60%, 70% 85%, 65% 55%, 60% 80%, 55% 50%, 50% 75%, 45% 45%, 40% 70%, 35% 40%, 30% 65%, 25% 35%, 20% 60%, 15% 30%, 10% 55%, 5% 25%, 0% 50%);
+        }
+
+        .date-highlight {
+            font-family: var(--fuente-vintage);
+            font-size: 2.5rem;
+            border-top: 1px solid var(--negro-coquette);
+            border-bottom: 1px solid var(--negro-coquette);
+            padding: 10px 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .funny-phrase {
+            font-family: var(--fuente-vintage);
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--negro-coquette);
+            margin: 35px 0 25px;
+        }
+
+        .funny-sub {
+            font-family: var(--fuente-sans);
+            font-size: 0.9rem;
+            font-weight: 400;
+            text-transform: none;
+            letter-spacing: 0px;
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        /* --- DRESS CODE --- */
+        .dress-code-section {
+            margin: 40px 0;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed var(--negro-coquette);
+        }
+
+        .dress-title {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .dress-type {
+            font-family: var(--fuente-vintage);
+            font-size: 2.5rem;
+            margin-top: 5px;
+            font-weight: 700;
+        }
+
+        /* --- FORMULARIO RSVP POP --- */
+        .rsvp-container {
+            background: #ffffff;
+            border: 2px solid var(--negro-coquette);
+            padding: 30px 20px;
+            box-shadow: 7px 7px 0px var(--azul-glitter);
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .rsvp-container h2 {
+            font-family: var(--fuente-sans);
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--negro-coquette);
+            font-family: var(--fuente-sans);
+            font-size: 1rem;
+            background-color: #fff;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            background-color: #f9f9f9;
+        }
+
+        .btn-black {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: var(--negro-coquette);
+            color: #fff;
+            border: 2px solid var(--negro-coquette);
+            font-family: var(--fuente-sans);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .btn-black:hover {
+            background: #fff;
+            color: var(--negro-coquette);
+        }
+
+        /* Estrellitas decorativas flotantes de fondo */
+        .star-deco {
+            position: absolute;
+            color: var(--azul-glitter);
+            font-size: 1.5rem;
+            opacity: 0.7;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <span class="star-deco" style="top: 40px; left: 15px; color: var(--azul-glitter);">★</span>
+        <span class="star-deco" style="top: 120px; right: 25px;">★</span>
+        <span class="star-deco" style="top: 450px; left: 30px;">★</span>
+
+        <header class="hero">
+            <p class="script-title">It's my</p>
+            <h1 class="main-title">Graduation</h1>
+            
+           <div class="disco-ball-deco">
+                <img src="cute.png" alt="Disco Ball" style="width: 300px; height: auto;">
+            </div>
+                   
+            
+            <div class="main-title">2022-2026</div>
+        </header>
+
+        <div class="details-box">
+            <div class="ripped-edge"></div>
+            
+            <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; margin-top: 15px;">Diciembre</p>
+            
+            <div class="date-highlight">
+                <span style="font-size: 1rem; text-transform: uppercase; letter-spacing: 1px;">Viernes</span>
+                <span>11</span>
+                <span style="font-size: 1.2rem; font-weight: 300;">18:00 hrs</span>
+            </div>
+
+            <p style="font-weight: 700; margin-bottom: 5px;">Lugar del evento</p>
+            <p style="font-size: 0.95rem; color: #444; padding: 0 10px;">Salón de Fiestas San Rafael, ubicado en C. del Panteón 20, Atlacomulco, 62560 Jiutepec, Mor.</p>
+            
+            <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x85cddf6e5ab34025:0xf3a60607e5ad2bb3?entry=s&sa=X&ved=2ahUKEwiGgsb2vquVAxX2gGoFHTkhNL0Q4kB6BAgVEAA&hl=es" target="_blank" class="btn-black" style="padding: 8px 15px; font-size: 0.75rem; max-width: 150px; margin: 15px auto 0;">Ver Ubicación</a>
+        </div>
+
+        <div class="funny-phrase">
+            ¡lo logramos!
+            <span class="funny-sub">El éxito es más bonito cuando se comparte en familia.</span>
+        </div>
+        <div class="dress-code-section" style="border: 2px dashed #b5b5b5; background-color: #fdfcfb; padding: 25px 40px; border-radius: 8px; text-align: center; max-width: 450px; margin: 30px auto;">
+    <p class="dress-title" style="font-size: 14px; color: #666; letter-spacing: 2px; margin-bottom: 5px;">✨ Dress Code</p>
+    <p class="dress-type" style="font-family: 'Didot', 'Bodoni MT', serif; font-size: 2rem; font-weight: bold; letter-spacing: 1px; margin: 10px 0; color: #000;">GALA / FORMAL</p>
+    <p style="font-size: 14px; color: #555; font-style: italic; margin-top: 5px;">De pies a cabeza, saca tu lado más elegante.</p>
+</div>
+
+
+<div class="bank-box">
+    <p class="bank-title">✨ Pases y Detalles ✨</p>
+    <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 5px;">¡Prepara el outfit!</p>
+    <p style="font-size: 0.95rem; color: #444; padding: 0 10px;">
+        Costo por BOLETO es: <strong>$950 pesos</strong>. ¡Muchas gracias por acompañarme y ser parte de este gran logro! 🤍
+    </p>
+  
+    <div class="bank-details" style="border: 1px dashed #b5b5b5; padding: 20px; border-radius: 8px; max-width: 450px; margin: 20px auto; text-align: left;">
+        <p><strong>Beneficiario:</strong> Sofia Victoria Rodríguez Castro</p>
+        <p><strong>Banco:</strong> Nu México</p>
+        <p><strong>CLABE:</strong> <code style="font-family: monospace; background: #eee; padding: 2px 6px; border-radius: 4px; font-size: 0.9rem;">638180010141195428</code></p>
+    </div>
+    
+    <p style="font-size: 0.8rem; color: #666; margin-top: 15px; font-style: italic;">
+        *Por favor, envíame tu comprobante al confirmar tu asistencia.
+    </p>
+</div>
+
+
+<div class="rsvp-container" style="background: #ffffff; border: 2px solid var(--negro-coquette); padding: 30px 20px; box-shadow: 7px 7px 0px var(--azul-glitter  margin-top: 30px; text-align: center;">
+    <h2 style="font-family: var(--fuente-sans); text-transform: uppercase; font-size: 1.4rem; letter-spacing: 2px; margin-bottom: 15px; color: var(--negro-coquette);">Confirmar Asistencia</h2>
+    
+    <p style="font-family: var(--fuente-sans); font-size: 0.9rem; margin-bottom: 25px; color: #444; line-height: 1.5; padding: 0 10px;">
+        Por favor, ayúdanos respondiendo el formulario oficial de Google dándole clic al botón de abajo:
+    </p>
+    
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_C3JmtGVEu_Tapav1mNSwz_KcpIZAwl_cOXghn9bvDiA-bA/viewform?usp=dialog" target="_blank" class="btn-black" style="display: inline-block; width: 100%; max-width: 280px; padding: 15px; background: var(--negro-coquette); color: #fff; border: 2px solid var(--negro-coquette); font-family: var(--fuente-sans); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; transition: all 0.2s ease; margin: 0 auto;">
+        Registrar Asistencia 
+    </a>
+</div>
+
+
+<footer style="margin-top: 60px; font-size: 0.75rem; letter-spacing: 1px; opacity: 0.7; color: var(--negro-coquette); text-align: center;">
+    <p>• Hecho con amor • 2026</p>
+</footer>
+                
+            </form>
+        </section>
+
+      
+    </div>
+
+    <script>
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            ...
+        });
+    </script>
+</body>
